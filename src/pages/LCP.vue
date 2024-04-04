@@ -6,7 +6,7 @@
       src="/img/wallpaper-4k.jpg"
       alt=""
       width="1000"
-      style="border: 2px solid white; border-radius: 1rem"
+      style="border: 2px solid red; border-radius: 1rem"
     />
   </div>
 </template>

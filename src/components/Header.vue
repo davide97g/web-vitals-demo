@@ -12,7 +12,7 @@
       </p>
     </a-flex>
     <a-flex gap="middle">
-      <a-button @click="() => goto('home')">Home</a-button>
+      <a-button @click="() => goto('')">Home</a-button>
       <a-button @click="() => goto('lcp')">LCP</a-button>
       <a-button @click="() => goto('inp')">INP</a-button>
       <a-button @click="() => goto('cls')">CLS</a-button>
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { router } from "../router";
 
-const goto = (page: "home" | "cls" | "lcp" | "inp") => {
+const goto = (page: "" | "cls" | "lcp" | "inp") => {
   router.push(`/${page}`);
 };
 </script>
