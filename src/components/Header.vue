@@ -12,10 +12,32 @@
       </p>
     </a-flex>
     <a-flex gap="middle">
-      <a-button @click="() => goto('')">Home</a-button>
-      <a-button @click="() => goto('lcp')">LCP</a-button>
-      <a-button @click="() => goto('inp')">INP</a-button>
-      <a-button @click="() => goto('cls')">CLS</a-button>
+      <a-button
+        @click="() => goto('')"
+        :type="router.currentRoute.value.path === '/' ? 'primary' : 'default'"
+        >Home</a-button
+      >
+      <a-button
+        @click="() => goto('lcp')"
+        :type="
+          router.currentRoute.value.path === '/lcp' ? 'primary' : 'default'
+        "
+        >LCP</a-button
+      >
+      <a-button
+        @click="() => goto('inp')"
+        :type="
+          router.currentRoute.value.path === '/inp' ? 'primary' : 'default'
+        "
+        >INP</a-button
+      >
+      <a-button
+        @click="() => goto('cls')"
+        :type="
+          router.currentRoute.value.path === '/cls' ? 'primary' : 'default'
+        "
+        >CLS</a-button
+      >
     </a-flex>
   </a-flex>
 </template>
