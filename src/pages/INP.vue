@@ -69,7 +69,7 @@ const addFast = () => {
 //     })
 //     .finally(() => (loading.value = false));
 
-//   // THIS IS BLOCKING THE EVENT CALLBACK from returning
+//   // THIS IS NOT BLOCKING ANYMORE
 //   slowRunningCode();
 // };
 </script>

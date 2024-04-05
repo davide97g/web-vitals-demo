@@ -5,4 +5,4 @@
 ## Setup
 
 - basic setup with `yarn` or `npm install`
-- Node.js `version >= 18.16` for unlighthouse
+- run locally `yarn dev`

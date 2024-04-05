@@ -1,15 +1,22 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import CLSView from "../pages/CLS.vue";
-import LCPView from "../pages/LCP.vue";
-import INPView from "../pages/INP.vue";
-import HomeView from "../pages/Home.vue";
-
 const routes = [
-  { path: "/", name: "Home", component: HomeView },
-  { path: "/cls", name: "Cumulative Layout Shift", component: CLSView },
-  { path: "/lcp", name: "Largest Contentful Print", component: LCPView },
-  { path: "/inp", name: "Interaction to Next Paint", component: INPView },
+  { path: "/", name: "Home", component: () => import("../pages/Home.vue") },
+  {
+    path: "/cls",
+    name: "Cumulative Layout Shift",
+    component: () => import("../pages/CLS.vue"),
+  },
+  {
+    path: "/lcp",
+    name: "Largest Contentful Print",
+    component: () => import("../pages/LCP.vue"),
+  },
+  {
+    path: "/inp",
+    name: "Interaction to Next Paint",
+    component: () => import("../pages/INP.vue"),
+  },
 ];
 
 export const router = createRouter({
