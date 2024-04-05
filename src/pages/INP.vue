@@ -8,7 +8,7 @@
         >Add Pokemon FAST</a-button
       >
     </a-flex>
-    <a-spin v-if="loading"></a-spin>
+    <a-spin v-if="loading" />
     <a-flex wrap="wrap" gap="small" justify="center">
       <PokemonComponent v-for="pokemon in pokemons" :pokemon="pokemon" />
     </a-flex>
@@ -26,7 +26,7 @@ const loading = ref(false);
 
 const slowRunningCode = () => {
   let j = 0;
-  for (let i = 0; i < 1 * 1000 * 1000000; i++) {
+  for (let i = 0; i < 1 * 1000 * 1000 * 1000; i++) {
     if (j % 2 === 0) j += 1;
   }
   return j;
